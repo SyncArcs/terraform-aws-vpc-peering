@@ -4,7 +4,7 @@ provider "aws" {
 
 
 module "vpc-peering" {
-  source = "../../."
+  source           = "../../."
   name             = "dev"
   environment      = "test"
   managedby        = "SyncArcs"
