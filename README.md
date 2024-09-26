@@ -120,5 +120,6 @@ Replace '[License Name]' and '[Your Name]' with the appropriate license and your
 |------|-------------|
 | <a name="output_accept_status"></a> [accept\_status](#output\_accept\_status) | The status of the VPC peering connection request. |
 | <a name="output_connection_id"></a> [connection\_id](#output\_connection\_id) | VPC peering connection ID. |
-| <a name="output_tags"></a> [tags](#output\_tags) | A mapping of tags to assign to the resource. |
+| <a name="output_tags"></a> [tags](#output\_tags) | A mapping of tags to assign to the resource. | 
+
 <!-- END_TF_DOCS -->
