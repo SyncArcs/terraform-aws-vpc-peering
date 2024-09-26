@@ -24,10 +24,11 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 module "vpc-peering" {
   source           = "git::https://github.com/SyncArcs/terraform-aws-vpc-peering.git?ref=v1.0.0"
-  name             = local.name
-  environment      = local.environment
-  requestor_vpc_id = "vpc-0d17e09526dd116c4"
-  acceptor_vpc_id  = "vpc-0ace2232c2c10bc28"
+  name             = "dev"
+  environment      = "test"
+  managedby        = "SyncArcs"
+  requestor_vpc_id = "vpc-03a4e6b96315a8cb2"
+  acceptor_vpc_id  = "vpc-07e6faf30b2a9774f"
 }
 ```
 
@@ -36,12 +37,12 @@ module "vpc-peering" {
 ```hcl
 module "vpc-peering" {
   source           = "git::https://github.com/SyncArcs/terraform-aws-vpc-peering.git?ref=v1.0.0"
-  name             = "vpc-peering"
-  environment      = "prod"
-  label_order      = ["environment", "name"]
-  requestor_vpc_id = "vpc-0408156477974f013"
-  acceptor_vpc_id  = "vpc-07fca4b652df66412"
-  accept_region    = "us-east-1"
+  name             = "test"
+  environment      = "test"
+  managedby        = "SyncArcs"
+  requestor_vpc_id = "vpc-0538338eb28a72da0"
+  acceptor_vpc_id  = "vpc-0504aa6182ab77a71"
+  accept_region    = "us-east-2"
   auto_accept      = false
 }
 ```
@@ -69,8 +70,8 @@ Replace '[License Name]' and '[Your Name]' with the appropriate license and your
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.21.0 |
-| <a name="provider_aws.peer"></a> [aws.peer](#provider\_aws.peer) | >= 5.21.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.76.1 |
+| <a name="provider_aws.peer"></a> [aws.peer](#provider\_aws.peer) | 3.76.1 |
 
 ## Modules
 
